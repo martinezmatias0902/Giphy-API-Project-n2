@@ -1,0 +1,68 @@
+/* Estilos UNO -----------------------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #ceccd1;
+    letter-spacing: 0;
+}
+header{
+    background-color: #2E32FB;
+    color: #ffffff;
+    font-size: 7px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 7px;
+}
+.boton{
+    padding: 5px;
+    background-color: #EE3EFE;
+    color: #ffffff;
+}
+#boton4{
+    background-color: #110038;
+    border-radius: 10px;
+    outline: none;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5vw;
+    margin-bottom: 3vw;
+    /* background-color: #ffffff; */
+    align-items: center;
+}
+#logo,
+#navegacion{
+    padding: 0 10vw;
+}
+#busqueda{
+    background-color: #B4B4B4;
+    margin: 0 10vw;
+    padding: 2px;
+    align-items: center;
+}
+#buscar{
+    background-color: #EE3EFE;
+    color: #ffffff;
+    margin: 2px;
+}
+#queBuscar{
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+    width: 70vw;
+    height: 30px;
+    margin: 9px;
+}
+#buscador{
+    height: 30px;
+    width: 8vw;
+    align-items: center;
+    background: #B4B4B4;
+    border: 1px solid #808080;
+    box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+}
+
+/* Estilos DOS -----------------------------------------*/
