@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crea tus guifos</title>
+    <link id="pagestyle" rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch:400,700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/RecordRTC/5.5.6/RecordRTC.js"></script>
+    <script src="js/js.js"></script>
+    <script src="js/upload.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: <span id="numero"></span>
+        </h1>
+    </header>
+
+    <main>
+
+        <div id="logo">
+            <a href="index.html"><img id="flecha" src="assets/arrow.svg" alt="arrow"></a>
+            <img id="miLogo" src="assets/gifOF_logo.png" alt="giphy_logo" srcset="">
+        </div>
+    </main>
+
+    <section class="contenedor" id="contenedorUno">
+        <div class="buscar">Crear Guifos</div>
+        <div class="buscarCaja">
+            <section>
+                <img src="assets/window img.png" alt="">
+            </section>
+            <section id="pasosCreacion">
+                <h4>Aquí podrás crear tus propios guifos</h4>
+                <div id="texto">
+                    <span>Crear tu <b>guifo</b> es muy fácil, graba cualquier imagen con tu cámara y obtén guifos
+                        personalizados. Los pasos para crear tu guifo son: </span> <br>
+                    <div id="pasosSeguir">
+                        <b>1)</b> Dar permisos de acceso a la cámara (sólo por el tiempo de uso)<br>
+                        <b>2)</b> Capturar tu momento guifo<br>
+                        <b>3)</b> Revisar el momento<br>
+                        <b>4)</b> Listo para subir y compartir!<br>
+                        <span>¿Quieres comenzar a crear tu <b>guifo</b> ahora?</span>
+                    </div>
+                    <figure class="contenedorBotones">
+                        <button class="botonCreacion" id="botonCancelar">Cancelar</button>
+                        <button class="botonCreacion" id="botonComenzar">Comenzar</button>
+                    </figure>
+                </div>
+            </section>
+
+        </div>
+    </section>
+
+    <section class="contenedor contenedorSecundario" id="contenedorDos">
+        <div class="buscar">
+            <span>Un chequeo antes de empezar</span>
+            <img src="assets/close.svg" class="cruz" alt="cerrar">
+        </div>
+        <div id="contenedorVideo">
+            <video id="capturarVideo"></video>
+        </div>
+        <div>
+            <button class="botonCreacion" id="imagenCamara"><img src="assets/camera.svg" alt="camara"></button>
+            <button class="botonCreacion" id="capturador">Capturar</button>
+        </div>
+    </section>
+
+    <section class="contenedor contenedorSecundario" id="contenedorTres">
+        <div class="buscar">
+            <span>Capturando tu Guifo</span>
+            <img src="assets/close.svg" class="cruz" alt="cerrar">
+        </div>
+        <div class="contenedorVideo">
+            <video id="capturaVideo"></video>
+        </div>
+        <div>
+            <input class="cronometro" type="text">
+            <div>
+                <button class="botonCreacion"><img src="assets/recording.svg" alt=""></button>
+                <button class="botonCreacion" onclick="startProgress()" id="startTimer">Listo</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="contenedor contenedorSecundario" id="contenedorCuatro">
+        <div class="buscar">
+            <span>Vista Previa</span>
+            <img src="assets/close.svg" class="cruz" alt="cerrar">
+        </div>
+        <div class="contenedorVideo">
+            <video id="vistaVideo"></video>
+        </div>
+        <div>
+            <div>
+                <input type="text" class="cronometro">
+                <button class="botonCreacion"><img src="assets/forward.svg" alt=""></button>
+                <progress min="0" max="100" id="dpBar" value="0"></progress>
+            </div>
+            <div>
+                <button class="botonCreacion" id="repetir">Repetir Captura</button>
+                <button class="botonCreacion" id="stopTimer" onclick="stopProgress()">Subir Guifo</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="contenedor contenedorSecundario" id="contenedorCinco">
+        <div class="buscar">
+            <span>Subiendo Guifo</span>
+            <img src="assets/close.svg" class="cruz" alt="cerrar">
+        </div>
+        <div>
+            <div>
+                <img src="assets/globe_img.png" alt="mundo">
+            </div>
+            <div>
+                <span>
+                    <b>Estamos subiendo tu guifo...</b>
+                </span>
+            </div>
+            <div>
+                <progress min="0" max="100"></progress>
+            </div>
+            <div>
+                <span>Tiempo restante: <s>38 años</s> algunos minutos</span>
+            </div>
+            <div>
+                <button class="botonCreacion" id="volverInicio">Cancelar</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="contenedor contenedorSecundario" id="contenedorSeis">
+        <div class="buscar">
+            <span>Guifo subido con éxito</span>
+            <img src="assets/close.svg" class="cruz" alt="cerrar">
+        </div>
+        <div>
+            <div>
+                <figure id="muestra">Aca va la foto del gif o gif </figure>
+            </div>
+            <div>
+                <span><b>Guifo creado con éxito</b></span>
+                <!-- <div id="gifoOk"></div> -->
+                <button class="botonCreacion" id="copiar">Copiar Enlace Guifo</button>
+                <button class="botonCreacion" id="descargar">Descargar Guifo</button>
+            </div>
+        </div>
+        <div>
+            <button class="botonCreacion" id="botonComenzar"><a href="misguifos.html">Listo</a></button>
+        </div>
+    </section>
+
+    <section class="predefinido">
+        <div class="sugerir">Mis Guifos <div>
+        <div id="misGuifos">        </div>
+    </section>
+
+    
+    
+</body>
+
+</html>

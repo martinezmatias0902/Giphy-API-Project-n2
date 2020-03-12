@@ -1,46 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-
-    <link rel="stylesheet" href="css/styles.css">
+    <title>gifOS - Giphy API</title>
+    <link id="pagestyle" rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch:400,700&display=swap" rel="stylesheet">
 
 </head>
+
 <body>
     <header>
-        <h1>¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803</h1>
+        <h1>¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: <span id="numero"></span>
+        </h1>
     </header>
 
-    <nav>
+    <main>
         <div id="logo">
-            <img src="gifOS_UI 3/assets/gifOF_logo_dark.png" alt="giphy_logo" srcset="">
+            <img id="miLogo" src="assets/gifOF_logo.png" alt="giphy_logo" srcset="">
         </div>
         <div id="navegacion">
-            <button class="boton" id="boton1">Crear Guifos</button>
-            <button class="boton" id="boton2">Elegir Tema</button>
-            <button class="boton" id="boton3"><img src="gifOS_UI 3/assets/forward.svg" alt="" srcset=""></button>
-            <button class="boton" id="boton4">Mis Guifos</button>
+            <a href="upload.html"> <button class="boton" id="boton1">Crear Guifos</button></a>
+            <div class="dropdown">
+                <button class="boton" id="boton2">Elegir Tema</button>
+                <button class="boton" id="boton3"><img src="assets/forward.svg"></button>
+                <div>
+                    <button onclick="cambiarTema('css/styles.css')">Sailor Day</button>
+                    <button id="boton5" onclick="cambiarTema('css/stylesTwo.css')">Sailor Night</button>
+                </div>
+            </div>
+            <a href="misguifos.html"><button class="boton" id="boton4"><u>M</u>is Guifos</button></a>
         </div>
-    </nav>
+    </main>
 
     <section id="busqueda">
         <div id="buscar">Buscar</div>
-        <input type="search" id="queBuscar">
-        <button id="buscador" onclick="queBuscar()"><img src="gifOS_UI 3/assets/Combined Shape.svg" alt="">  Buscar</button>
+        <div class="dropdownTwo">
+            <input type="search" id="queBuscar" name="q" placeholder="Busca gifs, hashtags, temas, busca lo que quieras…">
+            <div class="resultados_grupo">
+                <button class="resultados_button" id="sugeridoUno"><span>#Dead Pool</span></button>
+                <button class="resultados_button" id="sugeridoDos"><span>#Marvel</span></button>
+                <button class="resultados_button" id="sugeridoTres"><span>#Vikingos</span></button>
+            </div>
+        </div>
+        <button id="buscador"><img src="assets/Combined Shape.svg" alt="">Buscar</button>
     </section>
 
-    <section id="add-images">
-        <div>Tendencias</div>
+    <section id="busquedaHardcodeada" class="margenes">
+        <div class="sugerir">Hoy te sugerimos</div>
+        <div class="sugerencias">
+
+            <div class="gifos">
+                <div class="sugerencias_titulo">
+                    <p>#Jonathan Van Ness</p><img src="assets/close.svg" class="cruz" alt="cerrar">
+                </div>
+
+                <img id="gifUno" class="estadoGif" src="https://media.giphy.com/media/hTrXs1jw6ABY9dDyxS/giphy.gif" alt="Cargando">
+                <button class="verMas" id="sugerencia1"><span>Ver más</span></button>
+            </div>
+
+            <div class="gifos">
+                <div class="sugerencias_titulo">
+                    <p>#SailorMercury</p><img src="assets/close.svg" class="cruz" alt="cerrar">
+                </div>
+                <img id="gifDos" class="estadoGif" src="https://media.giphy.com/media/hTrXs1jw6ABY9dDyxS/giphy.gif" alt="Cargando">
+                <button class="verMas" id="sugerencia2"><span>Ver más</span></button>
+            </div>
+
+            <div class="gifos">
+                <div class="sugerencias_titulo">
+                    <p>#FabFive</p><img src="assets/close.svg" class="cruz" alt="cerrar">
+                </div>
+                <img id="gifTres" class="estadoGif" src="https://media.giphy.com/media/hTrXs1jw6ABY9dDyxS/giphy.gif" alt="Cargando">
+                <button class="verMas" id="sugerencia3"><span>Ver más</span></button>
+            </div>
+
+            <div class="gifos">
+                <div class="sugerencias_titulo">
+                    <p>#Unicorns&Rainbows</p><img src="assets/close.svg" class="cruz" alt="cerrar">
+                </div>
+                <img id="gifCuatro" class="estadoGif" src="https://media.giphy.com/media/hTrXs1jw6ABY9dDyxS/giphy.gif" alt="Cargando">
+                <button class="verMas" id="sugerencia4"><span>Ver más</span></button>
+            </div>
+        </div>
     </section>
 
-    <section id="resultado">
-        <div>RESULTADOOOS</div>
+    <section id="searchResults" class="margenes">
+        <div class="resultados">Tendencias</div>
+        <div class="tendencias"> </div>
     </section>
+
 
     <script src="js/script.js"></script>
 
+
 </body>
+
 </html>
