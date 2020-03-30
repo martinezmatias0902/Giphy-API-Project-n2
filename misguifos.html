@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,40 +8,40 @@
     <title>Tu galería Guifos </title>
     <link id="pagestyle" rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Chakra+Petch:400,700&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/RecordRTC/5.5.6/RecordRTC.js"></script>
-    <script src="js/js.js"></script>
-    <script src="js/upload.js"></script>
-    
-</head>
-<body>
-    <header>
-        <h1>¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: <span id="numero"></span>
-        </h1>
-    </header>
 
-    <main>
-        <div id="logo">
-            <img id="miLogo" src="assets/gifOF_logo.png" alt="giphy_logo" srcset="">
-        </div>
-        <div id="navegacion">
-            <a href="upload.html"> <button class="boton" id="boton1">Crear Guifos</button></a>
-            <div class="dropdown">
-                <button class="boton" id="boton2">Elegir Tema</button>
-                <button class="boton" id="boton3"><img src="assets/forward.svg"></button>
-                <div>
-                    <button onclick="cambiarTema('css/styles.css')">Sailor Day</button>
-                    <button id="boton5" onclick="cambiarTema('css/stylesTwo.css')">Sailor Night</button>
-                </div>
+    <body>
+        <header>
+            <h1>¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: <span id="numero"></span>
+            </h1>
+        </header>
+
+        <main>
+            <div id="logo">
+                <a href="index.html"><img id="miLogo" src="assets/gifOF_logo.png" alt="giphy_logo"></a>
             </div>
-            <a href=""><button class="boton" id="boton4"><u>M</u>is Guifos</button></a>
-        </div>
-    </main>
+            <div id="navegacion">
+                <a href="upload.html"> <button class="boton" id="boton1">Crear Guifos</button></a>
+                <div class="dropdown">
+                    <button class="boton" id="boton2">Elegir Tema</button>
+                    <button class="boton" id="boton3"><img src="assets/forward.svg" alt="siguiente"></button>
+                    <div>
+                        <button id="botonSailor">Sailor Day</button>
+                        <button id="boton5">Sailor Night</button>
+                    </div>
+                </div>
+                <a href=""><button class="boton" id="boton4"><u>M</u>is Guifos</button></a>
+            </div>
+        </main>
 
-    <section class="predefinido">
-        <div class="sugerir">Mis Guifos <div>
-        <div id="misGuifos">        </div>
-    </section>
 
-    
-</body>
+        <section class="margenes">
+            <div class="sugerir">Mis Guifos</div>
+            <div id="misGuifos"> </div>
+        </section>
+
+
+        <script src="js/misguifos.js"></script>
+
+    </body>
+
 </html>

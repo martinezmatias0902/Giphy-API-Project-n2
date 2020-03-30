@@ -8,7 +8,6 @@
     <title>gifOS - Giphy API</title>
     <link id="pagestyle" rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Chakra+Petch:400,700&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
@@ -19,16 +18,16 @@
 
     <main>
         <div id="logo">
-            <img id="miLogo" src="assets/gifOF_logo.png" alt="giphy_logo" srcset="">
+            <a href="index.html"><img id="miLogo" src="assets/gifOF_logo.png" alt="giphy_logo"></a>
         </div>
         <div id="navegacion">
-            <a href="upload.html"> <button class="boton" id="boton1">Crear Guifos</button></a>
+            <a href="upload.html"><button class="boton" id="boton1">Crear Guifos</button></a>
             <div class="dropdown">
                 <button class="boton" id="boton2">Elegir Tema</button>
-                <button class="boton" id="boton3"><img src="assets/forward.svg"></button>
+                <button class="boton" id="boton3"><img src="assets/forward.svg" alt="siguiente"></button>
                 <div>
-                    <button onclick="cambiarTema('css/styles.css')">Sailor Day</button>
-                    <button id="boton5" onclick="cambiarTema('css/stylesTwo.css')">Sailor Night</button>
+                    <button id="botonSailor">Sailor Day</button>
+                    <button id="boton5">Sailor Night</button>
                 </div>
             </div>
             <a href="misguifos.html"><button class="boton" id="boton4"><u>M</u>is Guifos</button></a>
@@ -36,7 +35,7 @@
     </main>
 
     <section id="busqueda">
-        <div id="buscar">Buscar</div>
+        <div class="buscar">Buscar</div>
         <div class="dropdownTwo">
             <input type="search" id="queBuscar" name="q" placeholder="Busca gifs, hashtags, temas, busca lo que quieras…">
             <div class="resultados_grupo">
@@ -45,12 +44,24 @@
                 <button class="resultados_button" id="sugeridoTres"><span>#Vikingos</span></button>
             </div>
         </div>
-        <button id="buscador"><img src="assets/Combined Shape.svg" alt="">Buscar</button>
+        <button id="buscador"><img id="lupa" src="assets/CombinedShape.svg" alt="lupa de busqueda">Buscar</button>
     </section>
 
     <section id="busquedaHardcodeada" class="margenes">
         <div class="sugerir">Hoy te sugerimos</div>
         <div class="sugerencias">
+
+            <!-- <div class="gifos">
+                <div class="sugerencias_titulo">
+                    <p></p><img src="assets/close.svg" alt="cerrar" class="cruz">
+                </div>
+                <div id="gifSugerido"></div>
+                <button class="verMas">Ver Más</button>
+            </div> -->
+
+
+
+
 
             <div class="gifos">
                 <div class="sugerencias_titulo">
@@ -92,9 +103,7 @@
         <div class="tendencias"> </div>
     </section>
 
-
     <script src="js/script.js"></script>
-
 
 </body>
 

@@ -8,9 +8,6 @@
     <link id="pagestyle" rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Chakra+Petch:400,700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/RecordRTC/5.5.6/RecordRTC.js"></script>
-    <script src="js/js.js"></script>
-    <script src="js/upload.js"></script>
-
 </head>
 
 <body>
@@ -23,15 +20,15 @@
 
         <div id="logo">
             <a href="index.html"><img id="flecha" src="assets/arrow.svg" alt="arrow"></a>
-            <img id="miLogo" src="assets/gifOF_logo.png" alt="giphy_logo" srcset="">
+            <a href="index.html"><img id="miLogo" src="assets/gifOF_logo.png" alt="giphy_logo"></a>
         </div>
     </main>
 
-    <section class="contenedor" id="contenedorUno">
+    <section class="contenedor contenedorUno">
         <div class="buscar">Crear Guifos</div>
         <div class="buscarCaja">
             <section>
-                <img src="assets/window img.png" alt="">
+                <img src="assets/windowimg.png" alt="">
             </section>
             <section id="pasosCreacion">
                 <h4>Aquí podrás crear tus propios guifos</h4>
@@ -46,121 +43,97 @@
                         <span>¿Quieres comenzar a crear tu <b>guifo</b> ahora?</span>
                     </div>
                     <figure class="contenedorBotones">
-                        <button class="botonCreacion" id="botonCancelar">Cancelar</button>
+                        <a href="index.html"><button class="botonCreacion" id="botonCancelar">Cancelar</button></a>
                         <button class="botonCreacion" id="botonComenzar">Comenzar</button>
                     </figure>
                 </div>
             </section>
-
         </div>
     </section>
 
-    <section class="contenedor contenedorSecundario" id="contenedorDos">
+    <section class="contenedor contenedorDos">
         <div class="buscar">
-            <span>Un chequeo antes de empezar</span>
+            <span id="tituloContenedor">Un chequeo antes de empezar</span>
             <img src="assets/close.svg" class="cruz" alt="cerrar">
         </div>
+
         <div id="contenedorVideo">
             <video id="capturarVideo"></video>
+            <div id="parte4" class="partesOcultas">
+                <img src="assets/globe_img.png" alt="mundo">
+                <div id="parte4_1">
+                    <span>
+                            <b>Estamos subiendo tu guifo...</b>
+                        </span>
+                </div>
+                <div id="parte4_2">
+                    <progress max="100"></progress>
+                </div>
+                <div id="parte4_3">
+                    <span>Tiempo restante: <s>38 años</s> algunos minutos</span>
+                </div>
+            </div>
         </div>
-        <div>
+
+        <div id="parte1">
             <button class="botonCreacion" id="imagenCamara"><img src="assets/camera.svg" alt="camara"></button>
             <button class="botonCreacion" id="capturador">Capturar</button>
         </div>
-    </section>
 
-    <section class="contenedor contenedorSecundario" id="contenedorTres">
-        <div class="buscar">
-            <span>Capturando tu Guifo</span>
-            <img src="assets/close.svg" class="cruz" alt="cerrar">
-        </div>
-        <div class="contenedorVideo">
-            <video id="capturaVideo"></video>
-        </div>
-        <div>
-            <input class="cronometro" type="text">
-            <div>
-                <button class="botonCreacion"><img src="assets/recording.svg" alt=""></button>
-                <button class="botonCreacion" onclick="startProgress()" id="startTimer">Listo</button>
+        <div id="parte2" class="partesOcultas">
+            <div class="cronometro" class="timer">00:03:<span class="segundos">00</span> </div>
+            <div class="contenedorRojos">
+                <button class="botonCreacion botonesRojos rojoUno"><img src="assets/recording.svg" alt=""></button>
+                <button class="botonCreacion botonesRojos rojoDos" id="startTimer">Listo</button>
             </div>
         </div>
-    </section>
 
-    <section class="contenedor contenedorSecundario" id="contenedorCuatro">
-        <div class="buscar">
-            <span>Vista Previa</span>
-            <img src="assets/close.svg" class="cruz" alt="cerrar">
-        </div>
-        <div class="contenedorVideo">
-            <video id="vistaVideo"></video>
-        </div>
-        <div>
+        <div id="parte3" class="partesOcultas">
             <div>
-                <input type="text" class="cronometro">
-                <button class="botonCreacion"><img src="assets/forward.svg" alt=""></button>
-                <progress min="0" max="100" id="dpBar" value="0"></progress>
+                <div class="cronometro" class="timerTwo">00:04:<span class="segundosTwo">00</span> </div>
+                <button class="botonCreacion botonPequeno"><img src="assets/forward.svg" alt=""></button>
+                <progress max="100" id="barraProgreso" value="0"></progress>
             </div>
-            <div>
+            <div class="botonesSubir">
                 <button class="botonCreacion" id="repetir">Repetir Captura</button>
-                <button class="botonCreacion" id="stopTimer" onclick="stopProgress()">Subir Guifo</button>
+                <button class="botonCreacion" id="stopTimer">Subir Guifo</button>
             </div>
         </div>
+
+        <div id="parte5" class="partesOcultas">
+            <a href="upload.html"><button class="botonCreacion" id="botonCancelar2">Cancelar</button></a>
+        </div>
+
     </section>
 
-    <section class="contenedor contenedorSecundario" id="contenedorCinco">
-        <div class="buscar">
-            <span>Subiendo Guifo</span>
-            <img src="assets/close.svg" class="cruz" alt="cerrar">
-        </div>
-        <div>
-            <div>
-                <img src="assets/globe_img.png" alt="mundo">
-            </div>
-            <div>
-                <span>
-                    <b>Estamos subiendo tu guifo...</b>
-                </span>
-            </div>
-            <div>
-                <progress min="0" max="100"></progress>
-            </div>
-            <div>
-                <span>Tiempo restante: <s>38 años</s> algunos minutos</span>
-            </div>
-            <div>
-                <button class="botonCreacion" id="volverInicio">Cancelar</button>
-            </div>
-        </div>
-    </section>
-
-    <section class="contenedor contenedorSecundario" id="contenedorSeis">
+    <section class="contenedor contenedorSecundario">
         <div class="buscar">
             <span>Guifo subido con éxito</span>
             <img src="assets/close.svg" class="cruz" alt="cerrar">
         </div>
-        <div>
+        <div id="secundario_1">
             <div>
-                <figure id="muestra">Aca va la foto del gif o gif </figure>
+                <figure id="muestra"></figure>
             </div>
-            <div>
+            <div class="organizarBotones">
                 <span><b>Guifo creado con éxito</b></span>
-                <!-- <div id="gifoOk"></div> -->
-                <button class="botonCreacion" id="copiar">Copiar Enlace Guifo</button>
-                <button class="botonCreacion" id="descargar">Descargar Guifo</button>
+                <button class="botonCreacion ultimosBotones" id="copiar">Copiar Enlace Guifo</button>
+                <button class="botonCreacion ultimosBotones" id="descargar">Descargar Guifo</button>
             </div>
         </div>
-        <div>
-            <button class="botonCreacion" id="botonComenzar"><a href="misguifos.html">Listo</a></button>
+        <div id="contenedorListo">
+            <a href="misguifos.html"><button class="botonCreacion">Listo</button></a>
         </div>
     </section>
 
-    <section class="predefinido">
-        <div class="sugerir">Mis Guifos <div>
-        <div id="misGuifos">        </div>
+    <section class="margenes">
+        <div class="sugerir">Mis Guifos</div>
+        <div id="misGuifos"> </div>
     </section>
 
-    
-    
+
+    <script src="js/uploadd.js"></script>
+
 </body>
 
 </html>
