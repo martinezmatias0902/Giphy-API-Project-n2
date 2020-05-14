@@ -1,9 +1,21 @@
-# GiphyAPIProject
+# Giphy API Project
 
-Bienvenidos!
+Welcome dear guest or traveler!
 
-Este es mi segundo proyecto trabajado de la mano de Acámica
+In this opportunity I develop an app that you will love!
 
-Una app web que te permite subir tus propios Gifs y buscar cualquier otro gif golpeando la API de Giphy.
+Are you ready to CREATE your own gifs and share it w/your friend?
 
-Segundo Proyecto de Acámica - JS, HTML5, CSS3, API
+## UPLOAD
+
+Upload your GIFs and Stickers to share on Facebook, Twitter,
+Instagram, text message, email, and everywhere else.
+
+Find your uploaded gifs in: https://giphy.com/channel/matiasmartinezed95
+
+## SEARCH
+
+Search those TOP TRENDING gifs that all want! 
+
+## SHARE
+
